@@ -29,7 +29,7 @@ import "./Board.css";
 
 function Board({ nrows, ncols, chanceLightStartsOn }) {
   const [board, setBoard] = useState(() => createBoard());
-  console.log(hasWon(board))
+
   /** create a board nrows high/ncols wide, each cell randomly lit or unlit */
   function createBoard() {
     let initialBoard = [];
@@ -47,7 +47,6 @@ function Board({ nrows, ncols, chanceLightStartsOn }) {
   function hasWon() {
     for(let row = 0; row < nrows; row++){
       for(let col = 0; col < ncols; col++){
-        console.log(board)
         if(board[row][col] === false){
           return false;
         }
