@@ -1,10 +1,18 @@
 .Cell {
+  border-radius: 10px;
   height: 100px;
   width: 100px;
-  background-color: darkgray;
+  background-image: url("https://ak9.picdn.net/shutterstock/videos/345499/thumb/6.jpg?ip=x480");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
   cursor: pointer;
 }
 
 .Cell-lit {
-  background-color: white;
+  border-radius: 10px;
+  background-image: url("https://cdn.britannica.com/41/129641-050-D30CA107/lightbulb-invention-Thomas-Alva-Edison-1879.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
 }

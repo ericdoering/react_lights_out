@@ -1,3 +1,11 @@
 .Board {
   margin: 0 auto;
+  position: relative;
+  border-radius: 20px;
+}
+
+.win-message {
+  color: goldenrod;
+  font-family: cursive;
+  font-size: 100px;
 }

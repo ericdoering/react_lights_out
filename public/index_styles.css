@@ -1,0 +1,11 @@
+body {
+    background-color: rgb(44, 138, 44);
+    text-align: center;
+}
+
+.main-title {
+    position: static;
+    font-family: cursive;
+    font-size: 50px;
+    color: antiquewhite;
+}

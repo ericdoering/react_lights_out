@@ -86,14 +86,14 @@ function Board({ nrows, ncols, chanceLightStartsOn }) {
 
   // if the game is won, just show a winning msg & render nothing else
   if (hasWon()) {
-    return <h1>You Won!</h1>
+    return <h1 className="win-message">You Won!</h1>
   }
   return (
   <>
     <table>
       <tbody>
         {board.map((row, y) => {
-          return <tr key={y}>
+          return <tr className="cell" key={y}>
             {row.map((cell, x) => {
               return <Cell key={x} flipCellsAroundMe={() => flipCellsAround(`${y}-${x}`)} isLit={board[y][x]} />
             })}
