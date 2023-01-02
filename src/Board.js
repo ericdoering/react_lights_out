@@ -55,6 +55,10 @@ function Board({ nrows, ncols, chanceLightStartsOn }) {
     return true;
   }
 
+  function resetBoard() {
+    setBoard(createBoard()) 
+  };
+
   function flipCellsAround(coord) {
     setBoard(oldBoard => {
       const [y, x] = coord.split("-").map(Number);
@@ -82,14 +86,10 @@ function Board({ nrows, ncols, chanceLightStartsOn }) {
       return newBoard;
     });
   }
-
-  // if the game is won, just show a winning msg & render nothing else
-  if (hasWon()) {
-    return <h1 className="win-message">You Won!</h1>
-  }
+  
   return (
-  <>
-    <table>
+  <>{ !hasWon() ? 
+    (<table>
       <tbody>
         {board.map((row, y) => {
           return <tr className="cell" key={y}>
@@ -99,7 +99,8 @@ function Board({ nrows, ncols, chanceLightStartsOn }) {
           </tr>
         })}
       </tbody>
-    </table>
+    </table>) : (<h1 className="win-message">You Won!</h1>)}
+    <button onClick={resetBoard}>RESET</button>
   </>
   )
 
